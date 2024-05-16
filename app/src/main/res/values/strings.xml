@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MangaGo</string>
+    <string-array name="MangaNameList">
+        <item>Google</item>
+        <item>Wikipedia</item>
+        <item>YouTube</item>
+        <item>Amazon</item>
+        <item>Apple</item>
+        <item>Facebook</item>
+        <item>Twitter</item>
+        <item>Instagram</item>
+        <item>Netflix</item>
+        <item>Microsoft</item>
+    </string-array>
+    <string-array name="MangaWebList">
+        <item>https://www.google.com</item>
+        <item>https://www.wikipedia.org</item>
+        <item>https://www.youtube.com</item>
+        <item>https://www.amazon.com</item>
+        <item>https://www.apple.com</item>
+        <item>https://www.facebook.com</item>
+        <item>https://www.twitter.com</item>
+        <item>https://www.instagram.com</item>
+        <item>https://www.netflix.com</item>
+        <item>https://www.microsoft.com</item>
+    </string-array>
+</resources>

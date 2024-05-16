@@ -1,0 +1,16 @@
+<resources>
+<!--Splash screen theme. You should use it in your manifest file for your Splash Activity-->
+<!--<style name="Theme.App.Starting" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--    <item name="android:windowBackground">@drawable/splash_screen</item> &lt;!&ndash;Also available: @drawable:launcher_screen_with_background&ndash;&gt;-->
+<!--    <item name="android:windowNoTitle">true</item>-->
+<!--    <item name="android:windowActionBar">false</item>-->
+<!--    <item name="android:windowFullscreen">true</item>-->
+<!--    <item name="android:windowContentOverlay">@null</item>-->
+<!--</style>-->
+<!--    <style name="Theme.App.Starting" parent="Theme.SplashScreen">-->
+<!--&lt;!&ndash;        <item name="windowSplashScreenBackground">#D8D7D7</item>&ndash;&gt;-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>-->
+<!--&lt;!&ndash;        <item name="postSplashScreenTheme">@style/Theme.SplashScreenDemo</item>&ndash;&gt;-->
+<!--    </style>-->
+
+</resources>
