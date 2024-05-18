@@ -56,7 +56,7 @@
             android:paddingBottom="10dp"
             android:text="sample"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

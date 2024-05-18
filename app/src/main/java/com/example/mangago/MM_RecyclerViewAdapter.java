@@ -1,6 +1,7 @@
 package com.example.mangago;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,7 @@ public class MM_RecyclerViewAdapter extends RecyclerView.Adapter<MM_RecyclerView
     @Override
     public void onBindViewHolder(@NonNull MM_RecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.tvName.setText(mangaLinkModels.get(position).getName());
+        holder.setLinkToLoad(mangaLinkModels.get(position).getLink());
     }
 
     @Override
@@ -42,24 +44,32 @@ public class MM_RecyclerViewAdapter extends RecyclerView.Adapter<MM_RecyclerView
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 //        Button button;
         TextView tvName;
+        String linkToLoad;
+
+        public void setLinkToLoad(String linkToLoad) {
+            this.linkToLoad = linkToLoad;
+        }
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.NameOfWebsite);
 
-            CardView cardView = itemView.findViewById(R.id.myCard);
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Log.i("AMIT", "onClick: ");
+        CardView cardView = itemView.findViewById(R.id.myCard);
+        cardView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Log.i("AMIT", "onClick: "+getAdapterPosition());
+            Intent intent = new Intent(v.getContext(), GeckoviewAactivity.class);
+            intent.putExtra("key", linkToLoad);
+            v.getContext().startActivity(intent);
 //                    if (v.isSelected()) {
 //                        cardView.setCardBackgroundColor(cardView.getResources().getColor(R.color.selected_color, null));
 //                    } else {
 //                        cardView.setCardBackgroundColor(cardView.getResources().getColor(R.color.default_color, null));
 //                    }
 //                    v.setSelected(!v.isSelected());  // Toggle selected state
-                }
-            });
-
+        }
+    });
         }
     }
 }

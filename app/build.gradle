@@ -23,9 +23,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+}
+
+ext {
+    geckoviewChannel = "stable"
+    geckoviewVersion = "126.0.20240509170740"
 }
 
 dependencies {
@@ -38,4 +43,5 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
     implementation libs.core.splashscreen
+    implementation "org.mozilla.geckoview:geckoview:${geckoviewVersion}"
 }
