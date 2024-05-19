@@ -1,25 +1,17 @@
 package com.example.mangago;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.splashscreen.SplashScreen;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import org.mozilla.geckoview.GeckoRuntime;
-import org.mozilla.geckoview.GeckoSession;
-import org.mozilla.geckoview.GeckoView;
 
 import java.util.ArrayList;
 
@@ -27,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     public ArrayList<MangaLinkModel> mangaLinkModels = new ArrayList<>();
     private static GeckoRuntime sRuntime;
+    @SuppressLint({"MissingInflatedId", "RestrictedApi"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +38,31 @@ public class MainActivity extends AppCompatActivity {
 //        dividerItem.setDrawable(ContextCompat.getDrawable(this,R.drawable.divider));
 //        recyclerView.addItemDecoration(dividerItem);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        BottomNavigationView bottomNavigationMenuView = (BottomNavigationView) findViewById(R.id.bottomnavigation);
+        BottomNavigationItemView bottomNavigationItemView = (BottomNavigationItemView) findViewById(R.id.goBack);
+        bottomNavigationItemView.setClickable(false);
+        bottomNavigationItemView = (BottomNavigationItemView) findViewById(R.id.goForward);
+        bottomNavigationItemView.setClickable(false);
+//        bottomNavigationItemView = (BottomNavigationItemView) findViewById(R.id.home);
+//        bottomNavigationItemView.setActivated(false);
+//        bottomNavigationItemView = (BottomNavigationItemView) findViewById(R.id.exit);
+//        bottomNavigationItemView.setActiveIndicatorEnabled(false);
+        bottomNavigationMenuView.setOnItemSelectedListener(menuItem -> {
+            Log.i("AMIT", "onCreate: "+menuItem.getItemId());
+            switch (menuItem.getItemId()) {
+                case R.id.goBack:
+                    break;
+                case R.id.goForward:
+                    break;
+                case R.id.home:
+                    break;
+                case R.id.exit:
+                    finishAndRemoveTask();
+            }
+            return true;
+        });
     }
+
 
     private void setMangaLinkModels() {
         String[] mangaNames = getResources().getStringArray(R.array.MangaNameList);
