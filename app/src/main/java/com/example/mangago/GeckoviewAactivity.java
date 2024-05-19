@@ -2,6 +2,7 @@ package com.example.mangago;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,6 +35,10 @@ public class GeckoviewAactivity extends AppCompatActivity {
         session.open(sRuntime);
         view.setSession(session);
         assert linkToLoad != null;
+        Toast toast = Toast.makeText(getApplicationContext(), "Opening "+linkToLoad, Toast.LENGTH_SHORT);
+
+        // Show the toast
+        toast.show();
         session.loadUri(linkToLoad);
         Log.i("AMIT", "loadUri: called");
     }
