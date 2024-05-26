@@ -4,12 +4,21 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import org.mozilla.geckoview.GeckoRuntime;
 
@@ -19,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
     public ArrayList<MangaLinkModel> mangaLinkModels = new ArrayList<>();
     private static GeckoRuntime sRuntime;
+    private InterstitialAd mInterstitialAd;
+    private AdView adView;
+    AdRequest adRequest;
+    private String TAG = "MangaGo";
+
     @SuppressLint({"MissingInflatedId", "RestrictedApi"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +75,32 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        adView = findViewById(R.id.ad_view);
+        adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+        InterstitialAd.load(this,getString(R.string.opener_ad_unit_id), adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                        mInterstitialAd.show(MainActivity.this);
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        Log.i(TAG, loadAdError.toString());
+                        mInterstitialAd = null;
+                    }
+                });
     }
 
 

@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/intro3"
             android:layout_alignBottom="@+id/bottomnavigation"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="125dp"
             android:layout_marginBottom="80dp">
 
 
@@ -68,6 +68,14 @@
                 <!--    </LinearLayout>-->
         </ScrollView>
 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scrollview"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_ad_unit_id" />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomnavigation"
             android:layout_width="match_parent"
@@ -80,14 +88,3 @@
             android:background="@drawable/line_background"
             app:menu="@menu/bottom_menu"/>
 </RelativeLayout>
-
-    <!--<LinearLayout-->
-    <!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--    android:layout_width="match_parent"-->
-    <!--    android:layout_height="match_parent">-->
-    <!--                <org.mozilla.geckoview.GeckoView-->
-    <!--                    android:id="@+id/geckoview"-->
-    <!--                    android:layout_width="match_parent"-->
-    <!--                    android:layout_height="match_parent" />-->
-    <!--</LinearLayout>-->

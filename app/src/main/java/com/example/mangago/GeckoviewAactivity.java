@@ -6,6 +6,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.mozilla.geckoview.GeckoRuntime;
@@ -15,6 +17,8 @@ import org.mozilla.geckoview.GeckoView;
 public class GeckoviewAactivity extends AppCompatActivity {
     private static GeckoRuntime sRuntime;
     private GeckoSession session = new GeckoSession();
+    private AdView adView;
+    AdRequest adRequest;
 
     private class MyNavigationDelegate implements GeckoSession.NavigationDelegate {
         public boolean canGoBack = false;
@@ -59,7 +63,7 @@ public class GeckoviewAactivity extends AppCompatActivity {
         session.open(sRuntime);
         view.setSession(session);
         assert linkToLoad != null;
-        Toast toast = Toast.makeText(getApplicationContext(), "Opening "+linkToLoad, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext(), "Going to a third party website", Toast.LENGTH_SHORT);
 
         // Show the toast
         toast.show();
@@ -86,6 +90,10 @@ public class GeckoviewAactivity extends AppCompatActivity {
             }
             return true;
         });
+
+        adView = (AdView) findViewById(R.id.ad_view_web);
+        adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 
 }

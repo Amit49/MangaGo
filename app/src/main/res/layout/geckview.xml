@@ -9,6 +9,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view_web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_ad_unit_id"
+            app:layout_constraintBottom_toTopOf="@+id/bottomnavigationWeb" />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomnavigationWeb"
             android:layout_width="match_parent"
