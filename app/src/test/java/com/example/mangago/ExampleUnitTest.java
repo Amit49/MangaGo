@@ -1,4 +1,4 @@
-package com.example.mangago;
+package com.example.Vyvymanga;
 
 import org.junit.Test;
 

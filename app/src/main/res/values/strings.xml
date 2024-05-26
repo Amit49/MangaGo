@@ -1,27 +1,71 @@
 <resources>
-    <string name="app_name">MangaGo</string>
+    <string name="app_name">Vyvymanga</string>
+    <string name="opener_ad_unit_id">ca-app-pub-7736314790212455/5359460580</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7736314790212455/6899772962</string>
     <string-array name="MangaNameList">
-        <item>Google</item>
-        <item>Wikipedia</item>
-        <item>YouTube</item>
-        <item>Amazon</item>
-        <item>Apple</item>
-        <item>Facebook</item>
-        <item>Twitter</item>
-        <item>Instagram</item>
-        <item>Netflix</item>
-        <item>Microsoft</item>
+        <item>Yaoi</item>
+        <item>Romance</item>
+        <item>Action</item>
+        <item>Adult</item>
+        <item>Comedy</item>
+        <item>Doujinshi</item>
+        <item>Drama</item>
+        <item>Boys Love</item>
+        <item>Fantasy</item>
+        <item>Harem</item>
+        <item>Historical</item>
+        <item>Horror</item>
+        <item>Isekai</item>
+        <item>Josei</item>
+        <item>Manhua</item>
+        <item>Manhwa</item>
+        <item>Martial-arts</item>
+        <item>Mature</item>
+        <item>Mystery</item>
+        <item>One-shot</item>
+        <item>Psychological</item>
+        <item>School life</item>
+        <item>Sci-Fi</item>
+        <item>Shoujo</item>
+        <item>Shounen</item>
+        <item>Slice of Life</item>
+        <item>Smut</item>
+        <item>Sports</item>
+        <item>Supernatural</item>
+        <item>Tragedy</item>
+        <item>Yuri</item>
     </string-array>
     <string-array name="MangaWebList">
-        <item>https://www.google.com</item>
-        <item>https://www.wikipedia.org</item>
-        <item>https://www.youtube.com</item>
-        <item>https://www.amazon.com</item>
-        <item>https://www.apple.com</item>
-        <item>https://www.facebook.com</item>
-        <item>https://www.twitter.com</item>
-        <item>https://www.instagram.com</item>
-        <item>https://www.netflix.com</item>
-        <item>https://www.microsoft.com</item>
+        <item>https://zinmanga.ms/manga-genre-1/yaoi/</item>
+        <item>https://zinmanga.ms/manga-genre-1/romance/</item>
+        <item>https://zinmanga.ms/manga-genre-1/action/</item>
+        <item>https://zinmanga.ms/manga-genre-1/adult/</item>
+        <item>https://zinmanga.ms/manga-genre-1/comedy/</item>
+        <item>https://zinmanga.ms/manga-genre-1/doujinshi/</item>
+        <item>https://zinmanga.ms/manga-genre-1/drama/</item>
+        <item>https://zinmanga.ms/manga-genre-1/yaoibl/</item>
+        <item>https://zinmanga.ms/manga-genre-1/fantasy/</item>
+        <item>https://zinmanga.ms/manga-genre-1/harem/</item>
+        <item>https://zinmanga.ms/manga-genre-1/historical/</item>
+        <item>https://zinmanga.ms/manga-genre-1/horror/</item>
+        <item>https://zinmanga.ms/manga-genre-1/isekai/</item>
+        <item>https://zinmanga.ms/manga-genre-1/josei/</item>
+        <item>https://zinmanga.ms/manga-genre-1/manhua/</item>
+        <item>https://zinmanga.ms/manga-genre-1/manhwa/</item>
+        <item>https://zinmanga.ms/manga-genre-1/martial-arts/</item>
+        <item>https://zinmanga.ms/manga-genre-1/mature/</item>
+        <item>https://zinmanga.ms/manga-genre-1/mystery/</item>
+        <item>https://zinmanga.ms/manga-genre-1/one-shot/</item>
+        <item>https://zinmanga.ms/manga-genre-1/psychological/</item>
+        <item>https://zinmanga.ms/manga-genre-1/school-life/</item>
+        <item>https://zinmanga.ms/manga-genre-1/sci-fi/</item>
+        <item>https://zinmanga.ms/manga-genre-1/shoujo/</item>
+        <item>https://zinmanga.ms/manga-genre-1/shounen/</item>
+        <item>https://zinmanga.ms/manga-genre-1/slice-of-life/</item>
+        <item>https://zinmanga.ms/manga-genre-1/smut/</item>
+        <item>https://zinmanga.ms/manga-genre-1/sports/</item>
+        <item>https://zinmanga.ms/manga-genre-1/supernatural/</item>
+        <item>https://zinmanga.ms/manga-genre-1/tragedy/</item>
+        <item>https://zinmanga.ms/manga-genre-1/yuri/</item>
     </string-array>
 </resources>

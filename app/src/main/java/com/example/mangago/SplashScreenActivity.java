@@ -1,4 +1,4 @@
-package com.example.mangago;
+package com.example.Vyvymanga;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;

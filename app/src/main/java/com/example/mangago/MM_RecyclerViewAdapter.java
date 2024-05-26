@@ -1,4 +1,4 @@
-package com.example.mangago;
+package com.example.Vyvymanga;
 
 import android.content.Context;
 import android.content.Intent;

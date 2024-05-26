@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MangaGo"
+rootProject.name = "Vyvymanga"
 include ':app'

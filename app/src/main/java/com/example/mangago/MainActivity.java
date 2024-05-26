@@ -1,4 +1,4 @@
-package com.example.mangago;
+package com.example.Vyvymanga;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private InterstitialAd mInterstitialAd;
     private AdView adView;
     AdRequest adRequest;
-    private String TAG = "MangaGo";
+    private String TAG = "Vyvymanga";
 
     @SuppressLint({"MissingInflatedId", "RestrictedApi"})
     @Override
